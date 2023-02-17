@@ -17,11 +17,11 @@ import java.util.Set;
 public class Payment implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Integer idReg;
+    Integer idPayment;
 
     @Enumerated
     TypePaiement typePaiement;
     Boolean paid;
-    @OneToMany (mappedBy = "regulation")
+    @OneToMany (mappedBy = "payment")
     Set<Invoice> invoices;
 }
