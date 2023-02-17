@@ -27,6 +27,8 @@ import java.util.Date;
         Date creationDate;
         String emplacement;
 
+        
+
     @ManyToOne
     public CategoryArticle categoryArticle;
     @ManyToOne
