@@ -16,7 +16,7 @@ import java.io.Serializable;
 public class OrderLine implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Integer idO;
+    Integer idOrderLine;
     Integer quantity;
 
     @OneToOne

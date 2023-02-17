@@ -22,7 +22,7 @@ import java.util.Date;
         String nomArt;
         String description;
         String picture;
-        float prix;
+        Float prix;
         int stock;
         Date creationDate;
         String emplacement;
