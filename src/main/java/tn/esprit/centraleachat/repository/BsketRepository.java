@@ -8,5 +8,6 @@ import java.util.List;
 
 @Repository
 public interface BsketRepository extends JpaRepository<Basket,Integer> {
-    List<Basket> findByIdRating(Integer idRating);
+
+    List<Basket> findByIdBasket(Integer idBasket);
 }

@@ -5,7 +5,7 @@ import lombok.experimental.FieldDefaults;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.Set;
+import java.util.List;
 
 @Entity
 @Setter
@@ -14,14 +14,15 @@ import java.util.Set;
 @NoArgsConstructor
 @ToString
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class Payment implements Serializable {
+public class Impot implements Serializable {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Integer idReg;
+    int idImpot;
+    String nameImpot;
+    float taux;
 
-    @Enumerated
-    TypePaiement typePaiement;
-    Boolean paid;
-    @OneToMany (mappedBy = "payment")
-    Set<Invoice> invoices;
+    @Transient
+    @OneToOne(mappedBy = "impot" )
+    Invoice invoice;
 }

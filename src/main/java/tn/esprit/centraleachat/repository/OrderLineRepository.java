@@ -8,5 +8,6 @@ import java.util.List;
 
 @Repository
 public interface OrderLineRepository extends JpaRepository<OrderLine,Integer> {
-    List<OrderLine> findByIdRating(Integer idRating);
+
+    List<OrderLine> findByIdO(Integer idOrderLine);
 }

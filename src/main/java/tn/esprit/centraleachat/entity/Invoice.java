@@ -25,7 +25,7 @@ import java.util.Date;
         float unitPrice;
         float totalPrice;
 
-        @Enumerated
+        @Enumerated(EnumType.STRING)
         TypeInvoice typeInvoice;
     @ManyToOne()
     public Supplier supplier;
@@ -33,4 +33,8 @@ import java.util.Date;
     Order order;
     @ManyToOne
     Payment payment;
+
+    @OneToOne
+    Impot impot;
+
 }
